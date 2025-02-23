@@ -67,13 +67,47 @@ button:hover{
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.3);
 }
 
-.twitter-button, .new-quote{
+.twitter-button, .new-quote, #speakQuote{
     box-shadow: 0 0.3rem rgba(0, 0,0, 0.3);
     border-radius:10px;
     font-size: 1.2rem;
     padding: 0.5rem 0.7rem;
 }
 
+.long-quote{
+    font-size: 1.5rem;
+}
+
 /* Media Query: Tablet Or Smaller */
 
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 1rem;
+    }
+    .quote-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+    .quote-img{
+        width: 20px;
+        height: 20px;
+    }
 
+    .quote-author {
+        font-size: 1.2rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+    button:hover{
+        transform: translate(0,0.3);
+        box-shadow: 0 0.1rem rgba(255, 255, 255, 0.3);
+    }
+}

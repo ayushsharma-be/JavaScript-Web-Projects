@@ -43,6 +43,14 @@ function tweetQuote() {
   window.open(twitterUrl, "_blank");
 }
 
+// Read Quote
+
+const speechBtn = document.getElementById("speakQuote");
+speechBtn.addEventListener("click", () => {
+  let speech = new SpeechSynthesisUtterance(quoteText.innerText);
+  speechSynthesis.speak(speech);
+});
+
 // Event Listeners
 newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
